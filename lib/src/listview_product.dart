@@ -40,9 +40,9 @@ class _ListViewProductState extends State<ListViewProduct> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Products List'),
+          title: Text('Productos'),
           centerTitle: true,
-          backgroundColor: Colors.pinkAccent,          
+          backgroundColor: Colors.greenAccent,          
         ),
         body: Center(
           child: ListView.builder(
@@ -63,7 +63,7 @@ class _ListViewProductState extends State<ListViewProduct> {
                              new Container( 
                               padding: new EdgeInsets.all(5.0),                          
                               child: '${items[position].productImage}' == ''
-                                  ? Text('No image')
+                                  ? Text('No imagen')
                                   : Image.network(
                                       '${items[position].productImage}' +
                                           '?alt=media',
@@ -121,7 +121,7 @@ class _ListViewProductState extends State<ListViewProduct> {
             Icons.add,
             color: Colors.white,
           ),
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Colors.greenAccent,
           onPressed: () => _createNewProduct(context),
         ),
       ),
@@ -135,18 +135,18 @@ class _ListViewProductState extends State<ListViewProduct> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Alert'),
-          content: Text('Are you sure you want to delete this item?'),
+          content: Text('¿Estás seguro de que quieres eliminar este producto?'),
           actions: <Widget>[
             IconButton(
                 icon: Icon(
                   Icons.delete,
-                  color: Colors.purple,
+                  color: Colors.red,
                 ),
                 onPressed: () =>
                   _deleteProduct(context, items[position], position,),                                        
                     ),                   
             new FlatButton(
-              child: Text('Cancel'),
+              child: Text('Cancelar'),
               onPressed: () {
                 Navigator.of(context).pop();
               },

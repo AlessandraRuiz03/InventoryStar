@@ -1,8 +1,11 @@
 import 'package:inventorystar/src/listview_product.dart';
 import 'package:inventorystar/src/login.dart';
+//import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  //WidgetsFlutterBinding.ensureInitialized();
+  //Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -27,7 +30,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: Center(
-      child : ListViewProduct(),
+      child : Login(),
      ),
     );
   }
@@ -52,6 +55,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
+  @override
+  void initState(){
+    super.initState();
+  }
+
+  /*void getUsers() async {
+    CollectionReference collectionReference = FirebaseFirestore.instance.collection("users");
+  }*/
+
   int _counter = 0;
 
   void _incrementCounter() {

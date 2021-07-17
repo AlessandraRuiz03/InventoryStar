@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'listview_product.dart';
+
 class Tabs extends StatefulWidget{
   @override
   _Tabs createState() => _Tabs();
@@ -123,7 +125,7 @@ class _Tabs extends State<Tabs>{
           ),
           body: TabBarView(
             children: [
-              products(),
+              ListViewProduct(),
               caducado(),
               noti(),
             ],
