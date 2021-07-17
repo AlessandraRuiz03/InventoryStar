@@ -1,3 +1,4 @@
+import 'package:inventorystar/src/listview_product.dart';
 import 'package:inventorystar/src/login.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -26,14 +27,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home: Center(
-      child : Login(),
+      child : ListViewProduct(),
      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key,  required this.title}) : super(key: key);
+  const MyHomePage({Key key,  this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect

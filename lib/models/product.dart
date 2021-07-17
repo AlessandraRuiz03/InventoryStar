@@ -1,4 +1,4 @@
-// @dart=2.9
+
 import 'package:firebase_database/firebase_database.dart';
 
 class Product {
@@ -20,12 +20,12 @@ class Product {
     this._productImage);
 
   Product.map(dynamic obj){
-    this._name = obj['name'];
-    this._codebar = obj['codebar'];
-    this._description = obj['description'];
-    this._price = obj['price'];
-    this._stock = obj['stock'];
-    this._productImage = obj['ProductImage'];
+    _name = obj['name'];
+    _codebar = obj['codebar'];
+    _description = obj['description'];
+    _price = obj['price'];
+    _stock = obj['stock'];
+    _productImage = obj['ProductImage'];
   }
 
   String get id => _id;

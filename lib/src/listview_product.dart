@@ -1,4 +1,4 @@
-// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'dart:async';
@@ -202,7 +202,7 @@ class _ListViewProductState extends State<ListViewProduct> {
       context,
       MaterialPageRoute(
           builder: (context) =>
-              ProductScreen(Product('null', '', '', '', '', '', ''))),
+              ProductScreen(Product(null, '', '', '', '', '', ''))),
     );
   }
 
