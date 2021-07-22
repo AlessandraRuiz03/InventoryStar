@@ -44,9 +44,9 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.inventorystar"
-        minSdkVersion 16
-        targetSdkVersion 30
+        applicationId 'com.example.inventorystar'
+        minSdkVersion 17
+        targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         //multiDexEnable true
@@ -67,9 +67,7 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation platform('com.google.firebase:firebase-bom:28.2.0')
-    implementation 'com.google.firebase:firebase-database-ktx'
-    implementation "androidx.multidex:multidex:2.0.1"
-}
-
-
+    implementation platform('com.google.firebase:firebase-bom:28.2.1')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation("com.android.support:multidex:1.0.3")
+    }
